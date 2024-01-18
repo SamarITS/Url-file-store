@@ -30,32 +30,32 @@ def is_enabled(value, default):
 # Ask Doubt on telegram @KingVJ01
       
 # Owner Information
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
-ADMINS = int(environ.get("ADMINS", ""))
+API_ID = int(environ.get("API_ID", "13415474"))
+API_HASH = environ.get("API_HASH", "01bb828c0429beeabd6e9e841d026231")
+ADMINS = int(environ.get("ADMINS", "885675538"))
 
 # Database Information
-CLONE_DB_URI = environ.get("CLONE_DB_URI", "")
-CDB_NAME = environ.get("CDB_NAME", "clonevjbotz")
-DB_URI = environ.get("DB_URI", "")
-DB_NAME = environ.get("DB_NAME", "vjbotz")
+CLONE_DB_URI = environ.get("CLONE_DB_URI", "mongodb+srv://smdfiletolink:smdfiletolink10@cluster0.ta94doi.mongodb.net/?retryWrites=true&w=majority")
+CDB_NAME = environ.get("CDB_NAME", "cluster0")
+DB_URI = environ.get("DB_URI", "mongodb+srv://smdfiletertest:smdfiletertest10@cluster0.bfkvuuf.mongodb.net/?retryWrites=true&w=majority")
+DB_NAME = environ.get("DB_NAME", "cluster0")
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
 # Bot Information
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
-BOT_USERNAME = environ.get("BOT_USERNAME", "") # your bot username without @
-PICS = (environ.get('PICS', 'https://graph.org/file/82ef767ffebe3a948e476.jpg https://graph.org/file/82ef767ffebe3a948e476.jpg')).split() # Bot Start Picture
+BOT_TOKEN = environ.get("BOT_TOKEN", "6773792493:AAEsGWXtUYM-8LAhHc3HdI9CkJNDQg46V3g")
+BOT_USERNAME = environ.get("BOT_USERNAME", "SMD_URLFileStore_bot") # your bot username without @
+PICS = (environ.get('PICS', 'https://graph.org/file/8ee819fae41b078f4eb17.jpg')).split() # Bot Start Picture
 
 # Auto Delete Information
 AUTO_DELETE = int(environ.get("AUTO_DELETE", "30")) # Time in Minutes
 AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "1800")) # Time in Seconds
 
 # Channel Information
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002017410713"))
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002038730909')).split()]
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
@@ -76,10 +76,10 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 # File Stream Config
 class Var(object):
     MULTI_CLIENT = False
-    name = str(getenv('name', 'filetolinkvjbot'))
+    name = str(getenv('name', 'smd'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002017410713'))
     PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
@@ -87,7 +87,7 @@ class Var(object):
     APP_NAME = None
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('APP_NAME'))
+        APP_NAME = str(getenv('APP_NAME', ''))
     
     else:
         ON_HEROKU = False
